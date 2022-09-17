@@ -33,21 +33,6 @@ public class WordCRUD implements ICRUD{
 		System.out.println("새 단어가 추가되었습니다!\n");
 	}
 	
-	public int update(Object obj) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	public int delete(Object obj) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	public void selectOne(int id) {
-		// TODO Auto-generated method stub
-		
-	}
-	
 	public void listAll() {
 		System.out.println("------------------------");
 		for(int i = 0; i < list.size(); i++) {
@@ -144,7 +129,7 @@ public class WordCRUD implements ICRUD{
 
 	public void saveFile() {
 		try {
-			PrintWriter pr = new PrintWriter(new FileWriter("test.txt"));
+			PrintWriter pr = new PrintWriter(new FileWriter("Dictionary.txt"));
 			for(Word one : list) {
 				pr.write(one.toFileString() + "\n");
 			}
@@ -165,6 +150,24 @@ public class WordCRUD implements ICRUD{
 		System.out.print("=> 원하는 단어는? ");
 		String keyword = s.next();
 		listAll(keyword);
+	}
+
+	@Override
+	public int update(Object obj) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int delete(Object obj) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void selectOne(int id) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
